@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AccessFuncs</name>
+    </assembly>
+    <members>
+        <member name="T:AccessFuncs.AccessType">
+            <summary>
+            This enumeration contains a list of common constants used
+            to interact with the Windows Accessibility features.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETHIGHCONTRAST">
+            <summary>
+            Gets the high contrast information using the
+            HIGHCONTRAST data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETHIGHCONTRAST">
+            <summary>
+            Sets the high contrast information using the
+            HIGHCONTRAST data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETSCREENREADER">
+            <summary>
+            Gets the screen readers status. Unlike some other
+            accessibility settings, this one relies on a BOOL,
+            rather than a data structure for input.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETSCREENREADER">
+            <summary>
+            Sets the screen readers status. Unlike some other
+            accessibility settings, this one relies on a BOOL,
+            rather than a data structure for input.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETFILTERKEYS">
+            <summary>
+            Gets the FilterKeys information using the
+            FILTERKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETFILTERKEYS">
+            <summary>
+            Sets the FilterKeys information using the
+            FILTERKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETTOGGLEKEYS">
+            <summary>
+            Gets the ToggleKeys information using the
+            TOGGLEKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETTOGGLEKEYS">
+            <summary>
+            Sets the ToggleKeys information using the
+            TOGGLEKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETMOUSEKEYS">
+            <summary>
+            Gets the MouseKeys information using the
+            MOUSEKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETMOUSEKEYS">
+            <summary>
+            Sets the MouseKeys information using the
+            MOUSEKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETSHOWSOUNDS">
+            <summary>
+            Gets the ShowSounds status. Unlike some other
+            accessibility settings, this one relies on a BOOL,
+            rather than a data structure for input. Microsoft
+            recommends using the GetSystemMetrics(SM_SHOWSOUNDS)
+            function in place of this call.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETSHOWSOUNDS">
+            <summary>
+            Sets the ShowSounds status. Unlike some other
+            accessibility settings, this one relies on a BOOL,
+            rather than a data structure for input. Microsoft
+            recommends using the GetSystemMetrics(SM_SHOWSOUNDS)
+            function in place of this call.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETSTICKYKEYS">
+            <summary>
+            Gets the StickyKeys information using the
+            STICKYKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETSTICKYKEYS">
+            <summary>
+            Sets the StickyKeys information using the
+            STICKYKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETACCESSTIMEOUT">
+            <summary>
+            Gets the Windows Accessibility Timeout information 
+            using the ACCESSTIMEOUT data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETACCESSTIMEOUT">
+            <summary>
+            Sets the Windows Accessibility Timeout information 
+            using the ACCESSTIMEOUT data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETSERIALKEYS">
+            <summary>
+            Gets the SerialKeys information using the
+            SERIALKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETSERIALKEYS">
+            <summary>
+            Sets the SerialKeys information using the
+            SERIALKEYS data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_GETSOUNDSENTRY">
+            <summary>
+            Gets the SoundSentry information using the
+            SOUNDSENTRY data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessType.SPI_SETSOUNDSENTRY">
+            <summary>
+            Gets the SoundSentry information using the
+            SOUNDSENTRY data structure.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.WinIniFlags">
+            <summary>
+            This enumeration contains the flags used to control
+            update of the user profile. Select SPIF_NONE if the
+            application does not need to update the profile.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.WinIniFlags.SPIF_NONE">
+            <summary>
+            Doesn't perform any type of profile update.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.WinIniFlags.SPIF_UPDATEINIFILE">
+            <summary>
+            Writes the update to the user profile.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.WinIniFlags.SPIF_SENDWININICHANGE">
+            <summary>
+            Writes the update to the user profile and
+            broadcasts the WM_SETTINGCHANGE message.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.WinIniFlags.SPIF_SENDCHANGE">
+            <summary>
+            Writes the update to the user profile and
+            broadcasts the WM_SETTINGCHANGE message.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.HighContrastFlags">
+            <summary>
+            A listing of HighContrast accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_HIGHCONTRASTON">
+            <summary>
+            HighContrast is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_AVAILABLE">
+            <summary>
+            HighContrast is available for use.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_HOTKEYACTIVE">
+            <summary>
+            HighContrast has the hot key selected.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_CONFIRMHOTKEY">
+            <summary>
+            Confirmation dialog box displayed for 
+            the HighContrast hot key.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_HOTKEYSOUND">
+            <summary>
+            Make a sound when HighContrast is selected.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_INDICATOR">
+            <summary>
+            Display an indicator when HighContrast is selected.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HighContrastFlags.HCF_HOTKEYAVAILABLE">
+            <summary>
+            HighContrast hot key is available.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.FilterKeysFlags">
+            <summary>
+            A listing of FilterKeys accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_FILTERKEYSON">
+            <summary>
+            FilterKeys is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_AVAILABLE">
+            <summary>
+            FilterKeys is available for use.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_HOTKEYACTIVE">
+            <summary>
+            The FilterKeys hotkey is active.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_CONFIRMHOTKEY">
+            <summary>
+            Confirmation dialog box displayed for 
+            the FilterKeys hot key.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_HOTKEYSOUND">
+            <summary>
+            Make a sound when changing the FilterKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_INDICATOR">
+            <summary>
+            Display an indicator when changing the FilterKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FilterKeysFlags.FKF_CLICKON">
+            <summary>
+            The FilterKeys click is set to on.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.ToggleKeysFlags">
+            <summary>
+            A listing of ToggleKeys accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_TOGGLEKEYSON">
+            <summary>
+            ToggleKeys is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_AVAILABLE">
+            <summary>
+            ToggleKeys is available for use.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_HOTKEYACTIVE">
+            <summary>
+            The ToggleKeys hotkey is active.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_CONFIRMHOTKEY">
+            <summary>
+            Confirmation dialog box displayed for 
+            the ToggleKeys hot key.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_HOTKEYSOUND">
+            <summary>
+            Make a sound when changing the ToggleKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ToggleKeysFlags.TKF_INDICATOR">
+            <summary>
+            Display an indicator when changing the ToggleKeys status.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.MouseKeysFlags">
+            <summary>
+            A listing of MouseKeys accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_MOUSEKEYSON">
+            <summary>
+            MouseKeys is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_AVAILABLE">
+            <summary>
+            MouseKeys is available for use.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_HOTKEYACTIVE">
+            <summary>
+            The MouseKeys hotkey is active.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_CONFIRMHOTKEY">
+            <summary>
+            Confirmation dialog box displayed for 
+            the MouseKeys hot key.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_HOTKEYSOUND">
+            <summary>
+            Make a sound when changing the MouseKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_INDICATOR">
+            <summary>
+            Display an indicator when changing the MouseKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_MODIFIERS">
+            <summary>
+            Use the Ctrl key to speed the mouse up and the 
+            Shift key to slow the mouse down.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_REPLACENUMBERS">
+            <summary>
+            The numeric keypad moves the mouse when Num Lock is
+            on when set.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_LEFTBUTTONSEL">
+            <summary>
+            The user wants to use the left button to select.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_RIGHTBUTTONSEL">
+            <summary>
+            The user wants to use the right button to select.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_LEFTBUTTONDOWN">
+            <summary>
+            The left button to down.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_RIGHTBUTTONDOWN">
+            <summary>
+            The right button to down.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MouseKeysFlags.MKF_MOUSEMODE">
+            <summary>
+            The system is processing numeric keypad input as mouse movement.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.StickyKeysFlags">
+            <summary>
+            A listing of StickyKeys accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_STICKYKEYSON">
+            <summary>
+            StickyKeys is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_AVAILABLE">
+            <summary>
+            StickyKeys is available for use.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_HOTKEYACTIVE">
+            <summary>
+            The StickyKeys hotkey is active.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_CONFIRMHOTKEY">
+            <summary>
+            Confirmation dialog box displayed for 
+            the StickyKeys hot key.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_HOTKEYSOUND">
+            <summary>
+            Make a sound when changing the StickyKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_INDICATOR">
+            <summary>
+            Display an indicator when changing the StickyKeys status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_AUDIBLEFEEDBACK">
+            <summary>
+            The system plays a sound when the control keys change status.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_TRISTATE">
+            <summary>
+            Pressing a key twice locks it--a third time releases it.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_TWOKEYSOFF">
+            <summary>
+            Pressing a control and another key together turns of StickyKeys.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LALTLATCHED">
+            <summary>
+            The left Alt key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LCTLLATCHED">
+            <summary>
+            The left Ctrl key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LSHIFTLATCHED">
+            <summary>
+            The left Shift key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RALTLATCHED">
+            <summary>
+            The right Alt key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RCTLLATCHED">
+            <summary>
+            The right Ctrl key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RSHIFTLATCHED">
+            <summary>
+            The right Shift key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LWINLATCHED">
+            <summary>
+            The left Windows key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RWINLATCHED">
+            <summary>
+            The right Windows key is latched.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LALTLOCKED">
+            <summary>
+            The left Alt key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LCTLLOCKED">
+            <summary>
+            The left Ctrl key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LSHIFTLOCKED">
+            <summary>
+            The left Shift key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RALTLOCKED">
+            <summary>
+            The right Alt key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RCTLLOCKED">
+            <summary>
+            The right Ctrl key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RSHIFTLOCKED">
+            <summary>
+            The right Shift key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_LWINLOCKED">
+            <summary>
+            The left Windows key is locked.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.StickyKeysFlags.SKF_RWINLOCKED">
+            <summary>
+            The right Windows key is locked.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.AccessTimeoutFlags">
+            <summary>
+            A listing of Windows Accessibility timeout flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessTimeoutFlags.ATF_TIMEOUTON">
+            <summary>
+            If this flag is set, the user has set a timeout value
+            and the Windows Accessibility features will turn off
+            after a given time period. If this flag is cleared, the
+            Windows Accessibility features are always available.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.AccessTimeoutFlags.ATF_ONOFFFEEDBACK">
+            <summary>
+            Make a sound when changing the timeout status.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SerialKeysFlags">
+            <summary>
+            A listing of SerialKeys accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SerialKeysFlags.SERKF_SERIALKEYSON">
+            <summary>
+            SerialKeys is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SerialKeysFlags.SERKF_AVAILABLE">
+            <summary>
+            SerialKeys is available for use. This flag is not
+            implemented
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SerialKeysFlags.SERKF_INDICATOR">
+            <summary>
+            Display an indicator when changing the SerialKeys status.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SoundSentryFlags">
+            <summary>
+            A listing of SoundSentry accessibility flags.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryFlags.SSF_SOUNDSENTRYON">
+            <summary>
+            SoundSentry is On
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryFlags.SSF_AVAILABLE">
+            <summary>
+            SoundSentry is available for use. This flag is not
+            implemented
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryFlags.SSF_INDICATOR">
+            <summary>
+            Display an indicator when changing the SoundSentry
+            status.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SoundSentryTextEffects">
+            <summary>
+            Contains a list of the possible screen effects for a
+            full screen DOS text mode application.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryTextEffects.SSTF_NONE">
+            <summary>
+            Don't display an effect.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryTextEffects.SSTF_CHARS">
+            <summary>
+            Flash the characters in the corner of the screen.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryTextEffects.SSTF_BORDER">
+            <summary>
+            Flash the border (overscan area) of the screen.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryTextEffects.SSTF_DISPLAY">
+            <summary>
+            Flash the entire screen.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SoundSentryGraphicEffects">
+            <summary>
+            Contains a list of the possible screen effects for a
+            full screen DOS graphics mode application.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryGraphicEffects.SSGF_NONE">
+            <summary>
+            Don't display an effect.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryGraphicEffects.SSGF_DISPLAY">
+            <summary>
+            Flash the entire screen.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SoundSentryWindowsEffects">
+            <summary>
+            Contains a list of the possible screen effects for a
+            Windows application.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryWindowsEffects.SSWF_NONE">
+            <summary>
+            Don't display an effect.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryWindowsEffects.SSWF_TITLE">
+            <summary>
+            Flash the title bar of the active application.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryWindowsEffects.SSWF_WINDOW">
+            <summary>
+            Flash the entire active application window.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryWindowsEffects.SSWF_DISPLAY">
+            <summary>
+            Flash the entire screen.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SoundSentryWindowsEffects.SSWF_CUSTOM">
+            <summary>
+            Use the custom flashing method specified by the
+            SoundSentryProc() function found in the DLL
+            specified by the iFSWindowsEffectDLL member.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.HIGHCONTRAST">
+            <summary>
+            Contains the HighContrast accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HIGHCONTRAST.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HIGHCONTRAST.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.HIGHCONTRAST.lpszDefaultScheme">
+            <summary>
+            Contains a text description of the current scheme.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.FILTERKEYS">
+            <summary>
+            Contains the FilterKeys accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.iWaitMSec">
+            <summary>
+            Defines the Acceptance Delay value.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.iDelayMSec">
+            <summary>
+            Defines the Delay Until Repeat value.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.iRepeatMSec">
+            <summary>
+            Defines the Repeat Rate value.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.FILTERKEYS.iBounceMSec">
+            <summary>
+            Defines the Debounce Time value.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.TOGGLEKEYS">
+            <summary>
+            Contains the ToggleKeys accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.TOGGLEKEYS.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.TOGGLEKEYS.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.MOUSEKEYS">
+            <summary>
+            Contains the MouseKeys accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.iMaxSpeed">
+            <summary>
+            Contains the maximum speed setting of the mouse.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.iTimeToMaxSpeed">
+            <summary>
+            Contains the acceleration setting of the mouse.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.iCtrlSpeed">
+            <summary>
+            Contains the control speed setting of the mouse.
+            Ignored if MKF_MODIFIERS is not set.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.dwReserved1">
+            <summary>
+            Reserved--Do Not Use
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.MOUSEKEYS.dwReserved2">
+            <summary>
+            Reserved--Do Not Use
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.STICKYKEYS">
+            <summary>
+            Contains the StickyKeys accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.STICKYKEYS.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.STICKYKEYS.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.ACCESSTIMEOUT">
+            <summary>
+            Contains the Windows Accessibility timeout setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ACCESSTIMEOUT.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ACCESSTIMEOUT.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.ACCESSTIMEOUT.iTimeOutMSec">
+            <summary>
+            Contains the timeout value for automatic shutdown in ms.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SERIALKEYS">
+            <summary>
+            Contains the SerialKeys accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.lpszActivePort">
+            <summary>
+            Provides the name of the port used to receive 
+            serial communications. If there is no port in 
+            use, this member is zero. If the port is set to
+            scan all inputs, then this value returns AUTO.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.lpszPort">
+            <summary>
+            Reserved--Do Not Use
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.iBaudRate">
+            <summary>
+            Contains the SerialKeys baud rate setting.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.iPortState">
+            <summary>
+            Contains a number that indicates the current 
+            port state. 0 = All input ignored, 1 = Input is
+            watched for SerialKeys activation when no other
+            application has the port open, 2 = All input is
+            treated as SerialKeys commands.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SERIALKEYS.iActive">
+            <summary>
+            Contains the number of the active port.
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.SOUNDSENTRY">
+            <summary>
+            Contains the SoundSentry accessibility setting information.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.cbSize">
+            <summary>
+            Contains the size of the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.dwFlags">
+            <summary>
+            Contains the settings flags for the data structure.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSTextEffect">
+            <summary>
+            Determines the type of text effect used to display
+            information on screen. Use with the
+            SoundSentryTextEffects enumeration.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSTextEffectMSec">
+            <summary>
+            Determines the duration of the text screen 
+            effect in ms.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSTextEffectColorBits">
+            <summary>
+            Determines the RGB color used to display a 
+            text screen effect.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSGrafEffect">
+            <summary>
+            Determines the type of graphic effect used to display
+            information on screen. Use with the
+            SoundSentryGraphicEffects enumeration.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSGrafEffectMSec">
+            <summary>
+            Determines the duration of the graphics screen 
+            effect in ms.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iFSGrafEffectColor">
+            <summary>
+            Determines the RGB color used to display a 
+            graphics screen effect.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iWindowsEffect">
+            <summary>
+            Determines the type of Windows application effect
+            used to display information on screen. Use with
+            the SoundSentryWindowsEffects enumeration.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iWindowsEffectMSec">
+            <summary>
+            Determines the duration of the Windows application 
+            screen effect in ms.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.lpszWindowsEffectDLL">
+            <summary>
+            Defines the name of the DLL that contains the
+            SoundSentryProc callback function. This member 
+            contains NULL if no DLL is used.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.SOUNDSENTRY.iWindowsEffectOrdinal">
+            <summary>
+            Reserved--Do Not Use
+            </summary>
+        </member>
+        <member name="T:AccessFuncs.Accessible">
+            <summary>
+            This class contains the functions required to work with the
+            Windows Accessibility features.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.Accessible.MAX_PATH">
+            <summary>
+            This constant contains the maximum path length
+            used by Windows.
+            </summary>
+        </member>
+        <member name="F:AccessFuncs.Accessible.SM_SHOWSOUNDS">
+            <summary>
+            This is the constant used to obtain information about
+            ShowSounds using the GetSystemMetrics() function.
+            </summary>
+        </member>
+        <member name="M:AccessFuncs.Accessible.#ctor">
+            <summary>
+            Accessible class constructor.
+            </summary>
+        </member>
+        <member name="M:AccessFuncs.Accessible.SystemParametersInfo(AccessFuncs.AccessType,System.UInt32,System.IntPtr,AccessFuncs.WinIniFlags)">
+            <summary>
+            This function gets or sets the Windows Accessibility
+            setting selected by uiAction. It can optionally
+            update the user profile to match the new settings.
+            </summary>
+            <param name="uiAction">The AccessType enumeration member 
+            that reflects the accessibility option you want to modify.</param>
+            <param name="uiParam">The actual size of the data structure.</param>
+            <param name="pvParam">A pointer to the local copy of the data structure.</param>
+            <param name="fWinIni">One of the WinIniFlag values that reflects 
+            the user profile update status.</param>
+            <returns>True if the call is successful.</returns>
+        </member>
+        <member name="M:AccessFuncs.Accessible.GetSystemMetrics(System.Int32)">
+            <summary>
+            The GetSystemMatrics function can retrieve a variety of 
+            system metrics information, along with some types of
+            system configuration information.
+            </summary>
+            <param name="nIndex">The index of the metric to retrieve.</param>
+            <returns>A number indicating the value of the metric.</returns>
+        </member>
+    </members>
+</doc>

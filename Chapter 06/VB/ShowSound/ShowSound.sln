@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ShowSound", "ShowSound.vbproj", "{25CC5F18-CEC8-4786-AC15-A084365C2D73}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{25CC5F18-CEC8-4786-AC15-A084365C2D73}.Debug.ActiveCfg = Debug|.NET
+		{25CC5F18-CEC8-4786-AC15-A084365C2D73}.Debug.Build.0 = Debug|.NET
+		{25CC5F18-CEC8-4786-AC15-A084365C2D73}.Release.ActiveCfg = Release|.NET
+		{25CC5F18-CEC8-4786-AC15-A084365C2D73}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

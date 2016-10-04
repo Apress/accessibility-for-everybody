@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>MouseOver Demonstration</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language=javascript>
+			function Emphasize(LabelName)
+			{
+				// Clear if LabelName doesn't contain anything.
+				if (LabelName=="")
+				{
+					// Change the characteristics as needed.
+					Label1.style.border = "";
+					Label2.style.border = "";
+					Input1.value = "";
+					Input2.value = "";
+					return;
+				}
+				
+				// Determine if the first input is selected.
+				if (LabelName=="Input1")
+				{
+					// Change the characteristics as needed.
+					Label1.style.border = "black thin solid";
+					Label2.style.border = "";
+					Input1.value = "Input1 selected";
+					Input2.value = "";
+				}
+				else
+				{
+					Label1.style.border = "";
+					Label2.style.border = "black thin solid";
+					Input1.value = "";
+					Input2.value = "Input2 selected";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<H1 align="center">Control Selection Example</H1>
+		<DIV>
+			<INPUT id="Input1"
+				   type=text 
+			       onmouseover="Emphasize('Input1')" 
+			       onfocus="Emphasize('Input1')"
+				   title="This textbox doesn't do anything special.">
+			<LABEL id="Label1" for="Input1">Input 1</LABEL>
+		</DIV>
+		<DIV>
+			<INPUT id="Input2"
+				   type=text 
+			       onmouseover="Emphasize('Input2')" 
+			       onfocus="Emphasize('Input2')"
+				   title="This textbox doesn't do anything special.">
+			<LABEL id="Label2" for="Input2">Input 2</LABEL>
+		</DIV>
+	</body>
+</html>

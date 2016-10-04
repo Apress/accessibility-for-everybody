@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Determining the Browser Name and Version</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language="javascript">
+			function CheckVersion()
+			{
+				// Obtain the name, version, and JavaScript enabled status
+				// for the browser.
+				Name.value = navigator.appName;
+				Version.value = navigator.appVersion;
+				Enabled.checked = navigator.javaEnabled();
+			}
+		</script>
+	</head>
+	<body onload="CheckVersion()">
+		<H1 align="center">Browser Name and Version</H1>
+		<DIV>
+			<INPUT type="text" id="Name" title="Name of the browser used to view this page." accessKey="N" value="Unknown" size="50">
+			<LABEL>Browser Name</LABEL>
+		</DIV>
+		<DIV>
+			<INPUT type="text" id="Version" title="The browser version number." accesskey="V" value="0.0" size="50">
+			<LABEL>Browser Version</LABEL>
+		</DIV>
+		<DIV>
+			<INPUT type="checkbox" id="Enabled" title="Shows if the user has JavaScript is enabled." accesskey="E">
+			<LABEL>Java Enabled</LABEL>
+		</DIV>
+		<NOSCRIPT>
+			<P align="justify" style="CLIP: rect(auto 20% auto 20%)">
+				The Web page script can't determine the 
+				name of your browser, the version number,
+				or if you have Java enabled.
+			</P>
+		</NOSCRIPT>
+	</body>
+</html>

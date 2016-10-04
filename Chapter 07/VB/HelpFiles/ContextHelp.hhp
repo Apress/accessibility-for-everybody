@@ -1,0 +1,23 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.1 or later
+Compiled file=ContextHelp.chm
+Contents file=Table of Contents.hhc
+Default topic=TestButton.htm
+Display compile progress=Yes
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=A Simple Context Sensitive Help File Example
+
+
+[FILES]
+TestButton.htm
+Overview.htm
+QuitButton.htm
+TestMessage.htm
+
+[INFOTYPES]
+Category:Test Button
+CategoryDesc:Learn about the Test button.
+

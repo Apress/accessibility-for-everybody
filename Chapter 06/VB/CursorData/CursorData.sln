@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CursorData", "CursorData.vbproj", "{5ECF613F-EC5C-4BE3-B4C0-CBED51E097BC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5ECF613F-EC5C-4BE3-B4C0-CBED51E097BC}.Debug.ActiveCfg = Debug|.NET
+		{5ECF613F-EC5C-4BE3-B4C0-CBED51E097BC}.Debug.Build.0 = Debug|.NET
+		{5ECF613F-EC5C-4BE3-B4C0-CBED51E097BC}.Release.ActiveCfg = Release|.NET
+		{5ECF613F-EC5C-4BE3-B4C0-CBED51E097BC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+<grammar xml:lang="en-US" tag-format="semantics-ms/1.0" version="1.0" root="Group1" mode="voice" xmlns="http://www.w3.org/2001/06/grammar">
+	<rule id="DisplayControls" scope="private">
+		<one-of>
+			<item>
+				Yes
+				<tag>$._value="Yes"</tag>
+			</item>
+			<item>
+				No
+				<tag>$._value="No"</tag>
+			</item>
+		</one-of>
+	</rule>
+	<rule id="GetColor" scope="private">
+		<one-of>
+			<item>
+				Red
+				<tag>$._value="Red"</tag>
+			</item>
+			<item>
+				Green
+				<tag>$._value="Green"</tag>
+			</item>
+			<item>
+				Blue
+				<tag>$._value="Blue"</tag>
+			</item>
+		</one-of>
+	</rule>
+	<rule id="Group2" scope="private">
+		<ruleref uri="#GetColor" type="application/srgs+xml"/>
+		<tag>$.GetColor=$$</tag>
+	</rule>
+	<rule id="Group1" scope="private">
+		<one-of>
+			<item>
+				<item repeat="0-1">
+					<ruleref uri="#DisplayControls" type="application/srgs+xml"/>
+					<tag>$.DisplayControls=$$</tag>
+				</item>
+				<ruleref uri="#GetColor" type="application/srgs+xml"/>
+				<tag>$.GetColor=$$</tag>
+			</item>
+			<item>
+				<item repeat="0-1">
+					<ruleref uri="#GetColor" type="application/srgs+xml"/>
+					<tag>$.GetColor=$$</tag>
+				</item>
+				<ruleref uri="#DisplayControls" type="application/srgs+xml"/>
+				<tag>$.DisplayControls=$$</tag>
+			</item>
+		</one-of>
+	</rule>
+</grammar>

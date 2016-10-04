@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="EN">
+   <head>
+      <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+      <title>Test Web Page</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="Content-Script-Type" content="text/tcl">
+      <link media="screen" href="MyStyle.css" type="text/css" rel="StyleSheet">
+      <script type="text/JavaScript">
+        function btnTest_OnClick()
+        {
+            txtOutput.value = "Hello World";
+        }
+      </script>
+   </head>
+   <body>
+      <h1 align="center">Welcome to the Test Web Page
+      </h1>
+      <noscript>
+         Your browser doesn't support scripts. The only task the scripts on this page 
+         perform is to display Hello World in the output textbox when the user clicks 
+         Click Me or remove the text when the user clicks Reset.
+      </noscript>
+      <p>
+         This is some introductory text.<br />
+         <span class="highlight">This text is in <span class="highlight-i">RED</span> and 
+            the word "RED" is in italics.</span>
+      </p>
+      <p class="underline">
+         This text is underlined.
+      </p>
+      <h2>Here is a Second Level Header
+      </h2>
+      <p>
+         <label><span class="underline">O</span>utput Textbox</label>
+         <input id="txtOutput" 
+                title="This is the output textbox." 
+                accesskey="O" 
+                type="text" 
+                value="Page Output" />
+      </p>
+      <p>
+         <input onkeypress="btnTest_OnClick()" id="btnTest" title="Click this button to see a change in the text box."
+            accesskey="C" onclick="btnTest_OnClick()" tabindex="1" type="button" value="Click Me" />
+         <input onkeypress='txtOutput.value=""' id="btnReset" title="Click this button to reset the form."
+            accesskey="R" onclick='txtOutput.value=""' tabindex="2" type="reset" value="Reset" />
+      </p>
+      <h2>Here is Another Header
+      </h2>
+      <p>
+         Click the link to get to the <a title="Click this link to visit the DataCon Services Home Page." accesskey="H" href="http://www.mwt.net/~jmueller">
+            DataCon Home Page</a>.
+      </p>
+   </body>
+</html>

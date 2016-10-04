@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MouseCheck", "MouseCheck.vbproj", "{CEB4516B-1832-4986-BD0B-B0FB7EF8AD6D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CEB4516B-1832-4986-BD0B-B0FB7EF8AD6D}.Debug.ActiveCfg = Debug|.NET
+		{CEB4516B-1832-4986-BD0B-B0FB7EF8AD6D}.Debug.Build.0 = Debug|.NET
+		{CEB4516B-1832-4986-BD0B-B0FB7EF8AD6D}.Release.ActiveCfg = Release|.NET
+		{CEB4516B-1832-4986-BD0B-B0FB7EF8AD6D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

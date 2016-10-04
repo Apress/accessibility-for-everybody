@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevCaps", "DevCaps.csproj", "{75B95561-DFBC-4F56-9E4C-13C07AAC7EB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{75B95561-DFBC-4F56-9E4C-13C07AAC7EB4}.Debug.ActiveCfg = Debug|.NET
+		{75B95561-DFBC-4F56-9E4C-13C07AAC7EB4}.Debug.Build.0 = Debug|.NET
+		{75B95561-DFBC-4F56-9E4C-13C07AAC7EB4}.Release.ActiveCfg = Release|.NET
+		{75B95561-DFBC-4F56-9E4C-13C07AAC7EB4}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

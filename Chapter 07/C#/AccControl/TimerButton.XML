@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AccControl</name>
+    </assembly>
+    <members>
+        <member name="T:AccControl.FrmMoreTime">
+            <summary>
+            Summary description for FrmMoreTime.
+            </summary>
+        </member>
+        <member name="F:AccControl.FrmMoreTime.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AccControl.FrmMoreTime.#ctor(System.Int32)">
+            <summary>
+            The constructor for the form that allows the user to
+            select more time.
+            </summary>
+            <param name="CurrentTime">The current timer value.</param>
+        </member>
+        <member name="M:AccControl.FrmMoreTime.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:AccControl.FrmMoreTime.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:AccControl.FrmMoreTime.NewTime">
+            <summary>
+            The new time value the user selected for the automatic
+            click value.
+            </summary>
+        </member>
+        <member name="T:AccControl.TimerButton">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:AccControl.TimerButton.#ctor">
+            <summary>
+            The constructor for the TimerButton control.
+            </summary>
+        </member>
+        <member name="M:AccControl.TimerButton.TimerStart(System.Boolean)">
+            <summary>
+            Turns the button timer on so that the button will
+            click automatically when time expires.
+            </summary>
+            <param name="Start">Set to true to turn the timer on or 
+            false to turn the timer off.</param>
+        </member>
+        <member name="P:AccControl.TimerButton.TimerInterval">
+            <summary>
+            Sets the timing interval for the timer
+            in seconds.
+            </summary>
+        </member>
+        <member name="P:AccControl.TimerButton.CountdownEnabled">
+            <summary>
+            Enables the count down display in the button
+            caption.
+            </summary>
+        </member>
+        <member name="P:AccControl.TimerButton.TimerValue">
+            <summary>
+            Returns the amount of time left before the
+            automatic click takes place.
+            </summary>
+        </member>
+        <member name="P:AccControl.TimerButton.TimerEnabled">
+            <summary>
+            Returns true if the timer is running.
+            </summary>
+        </member>
+    </members>
+</doc>

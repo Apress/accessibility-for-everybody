@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PlaySound</name>
+    </assembly>
+    <members>
+        <member name="T:PlaySound.PlaySound">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:PlaySound.PlaySound.#ctor">
+            <summary>
+            PlaySound constructor.
+            </summary>
+        </member>
+        <member name="M:PlaySound.PlaySound.GenerateSound(System.Windows.Forms.Control)">
+            <summary>
+            Outputs a sound and/or a sound description based
+            upon the current ShowSound Windows Accessiblity setting.
+            </summary>
+            <param name="Parent">The control hosting the sound.</param>
+        </member>
+        <member name="M:PlaySound.PlaySound.IsShowSoundsSelected">
+            <summary>
+            Obtains the current status of the ShowSounds
+            Windows Accessibility setting.
+            </summary>
+            <returns>True or False depending on setting value</returns>
+        </member>
+        <member name="E:PlaySound.PlaySound.SoundDisplayed">
+            <summary>
+            This event fires when the system displays a
+            ShowSounds message.
+            </summary>
+        </member>
+        <member name="E:PlaySound.PlaySound.SoundGenerated">
+            <summary>
+            This event fires when the system generates a
+            sound.
+            </summary>
+        </member>
+        <member name="P:PlaySound.PlaySound.MakeSound">
+            <summary>
+            Determines if the system will make a sound.
+            </summary>
+        </member>
+        <member name="P:PlaySound.PlaySound.SoundFileName">
+            <summary>
+            Contains the name of the file to play.
+            </summary>
+        </member>
+        <member name="P:PlaySound.PlaySound.ShowSoundsDescription">
+            <summary>
+            Describes the sound to the person using ShowSounds.
+            </summary>
+        </member>
+        <member name="P:PlaySound.PlaySound.AutomaticDelay">
+            <summary>
+            Determines the hover delay for the tooltip
+            displaying the sound description. (1 ms minimum)
+            </summary>
+        </member>
+        <member name="P:PlaySound.PlaySound.AutoPopDelay">
+            <summary>
+            Determines the amount of time the tooltip
+            will appear on screen. (3000 ms minimum)
+            </summary>
+        </member>
+    </members>
+</doc>

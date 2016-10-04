@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAgent", "MSAgent.csproj", "{22BB5545-EA11-4847-986D-D265176A6190}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{22BB5545-EA11-4847-986D-D265176A6190}.Debug.ActiveCfg = Debug|.NET
+		{22BB5545-EA11-4847-986D-D265176A6190}.Debug.Build.0 = Debug|.NET
+		{22BB5545-EA11-4847-986D-D265176A6190}.Release.ActiveCfg = Release|.NET
+		{22BB5545-EA11-4847-986D-D265176A6190}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

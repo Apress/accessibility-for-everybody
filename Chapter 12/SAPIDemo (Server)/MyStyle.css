@@ -1,0 +1,37 @@
+BODY {
+    font-size: 100%;
+    color: black;
+    background-color: white
+}
+
+H1 {
+    font-size: 200%;
+    color: black;
+    background-color: white
+}
+
+H2 {
+    font-size: 150%;
+    color: black;
+    background-color: white
+}
+
+.highlight {
+    font-size: 100%;
+    color: red;
+    background-color: white
+}
+
+.highlight-i {
+    font-size: 100%;
+    color: red;
+    font-style: italic;
+    background-color: white
+}
+
+.underline {
+    font-size: 100%;
+    color: black;
+    text-decoration: underline;
+    background-color: white
+}

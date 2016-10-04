@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>MASS Script Inside</title>
+</head>
+<body><OBJECT ID="AgentControl" width=0 height=0
+  CLASSID="CLSID:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F"
+  CODEBASE="http://activex.microsoft.com/activex/controls/agent2/MSagent.exe#VERSION=2,0,0,0">
+</OBJECT>
+<Object ID="L&HTruVoice" Width=0 Height=0
+  ClassID="CLSID:B8F2846E-CE36-11D0-AC83-00C04FD97575"
+  CodeBase="http://activex.microsoft.com/activex/controls/agent2/tv_enua.exe#VERSION=6,0,0,0">
+</Object>
+<script language="VBScript"><!--
+
+'>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+'< This Microsoft Agent Script was generated using
+'> MASS 2.0 - The Microsoft Agent Scripting Software
+'< Copyright © 2002 Abhisoft Technologies
+'> This Notice must NOT be Removed.
+'< To Download your own copy of MASS visit the MASS website at
+'>             http://www.abhisoft.net/mass/
+'<			It's a FREEWARE
+'> Thank You for using the Microsoft Agent Scripting Software
+'< Abhishek P
+'> Author, MASS
+'<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	dim Merlin
+Sub window_onload()
+	Load
+End Sub
+
+Sub InitPopupMenuCmds()
+	Merlin.Commands.RemoveAll
+	Merlin.Commands.Add "ACO", "Advanced Character Options", "Advanced"
+	Merlin.Commands.Add "CDC", "Change Default Character", "Change Default Character"
+	Merlin.Commands.Add "AGENTWORLD", "Microsoft Agent World", "Microsoft Agent World"
+	Merlin.Commands.Add "MASS", "MASS Home Page", "MASS Home Page"
+	Merlin.Commands.Add "READPAGE", "Read Web Page", "Read Web Page"
+	Merlin.Commands.Add "STOPALL", "Shut Up!", "Shut Up"
+	Merlin.Commands.Add "BYE" , "BYE!", "Bye"
+End Sub
+
+Sub AgentControl_Command(ByVal UserInput)
+	Select Case UserInput.Name
+		Case "ACO"
+			AgentControl.PropertySheet.Visible = True
+		Case "AGENTWORLD"
+			Window.open "http://msagentworld.tripod.com"
+		Case "MASS"
+			Window.open "http://www.abhisoft.net/mass"
+		Case "READPAGE"
+			If document.body.innerText = "" Then
+				Merlin.Speak "Nothing to Read"
+			Else
+				Merlin.StopAll
+				Merlin.Speak "OK"
+				Merlin.Speak document.body.innerText
+			End If
+		Case "STOPALL"
+			Merlin.StopAll
+			Merlin.Speak "OK"
+		Case "BYE"
+			Merlin.StopAll
+			Merlin.Hide
+			Set Merlin = Nothing
+			AgentControl.Characters.Unload "Merlin"
+		Case "CDC"
+			AgentControl.ShowDefaultCharacterProperties
+	End Select
+End Sub
+
+Sub AgentControl_Click(ByVal CharacterID, ByVal Button, ByVal Shift, ByVal X, ByVal Y)
+
+End Sub
+
+Sub AgentControl_DblClick(ByVal CharacterID, ByVal Button, ByVal Shift, ByVal X, ByVal Y)
+	On Error Resume Next
+	Merlin.StopAll
+	Set Merlin = Nothing
+	AgentControl.Characters.Unload "Merlin"
+End Sub
+
+Sub Load()
+	AgentControl.Connected = True
+	AgentControl.Characters.Load "Merlin", "merlin.acs"
+	Set Merlin = AgentControl.Characters ("Merlin")
+	InitPopupMenuCmds
+	Play
+End Sub
+
+Sub Play()
+On Error Resume Next
+Merlin.Show
+Merlin.Play "Announce"
+Merlin.Play "RestPose"
+Merlin.Speak "\Map=""What you hear is not what you see!""=""Hello World""\"
+Merlin.Play "Greet"
+Merlin.Play "RestPose"
+Merlin.Speak "Want to see me pull a rabbit from my hat?"
+Merlin.Play "DoMagic1"
+Merlin.Play "DoMagic2"
+Merlin.Play "Surprised"
+Merlin.Play "Confused"
+Merlin.Play "RestPose"
+Merlin.Speak "That trick never works!"
+Merlin.Play "Sad"
+Merlin.Play "RestPose"
+Merlin.Speak "Goodbye"
+Merlin.Play "Wave"
+Merlin.Hide
+End Sub
+
+--></script>
+</body>
+Uses Microsoft Agent Technology</html>

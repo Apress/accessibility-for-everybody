@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccControlTest", "AccControlTest.csproj", "{578D21AA-7C12-4EB6-9BB9-2DB1867BDD53}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{578D21AA-7C12-4EB6-9BB9-2DB1867BDD53}.Debug.ActiveCfg = Debug|.NET
+		{578D21AA-7C12-4EB6-9BB9-2DB1867BDD53}.Debug.Build.0 = Debug|.NET
+		{578D21AA-7C12-4EB6-9BB9-2DB1867BDD53}.Release.ActiveCfg = Release|.NET
+		{578D21AA-7C12-4EB6-9BB9-2DB1867BDD53}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
